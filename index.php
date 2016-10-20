@@ -15,7 +15,7 @@
 	<body>
 		<?php
 			$webdev_class = "active";
-			include("../navbar.php");
+			include("navbar.php");
 		?>
 
       <div class="container" style="margin-bottom: 20px;">
