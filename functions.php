@@ -99,12 +99,12 @@
           echo '" data-target="#video-carousel" data-slide-to="';
           echo $days - 1;
           echo '"/>';
-          echo '<div class="day' . $days . ' overlay"';
+          echo '<div class="day overlay"';
           echo ' data-target="#video-carousel" data-slide-to="';
           echo $days - 1;
           echo '">' . $days . '</div></a>';
         } else {
-          echo '<div class="day' . $days . '"></div>';
+          echo '<div class="day">' . $days . '</div>';
         }
         echo '</div></div>';
       }

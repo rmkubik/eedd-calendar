@@ -64,9 +64,16 @@
       margin-left: 85.5%;
 }
 .calendarDay {
-  /*border: 1px solid black;*/
   height: 200px;
   overflow: hidden;
+}
+.calendarDay, .calendarDay a {
+  font-family: helvetica, sans-serif;
+  color: white;
+  font-size: 8vw;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px rgba(150, 150, 150, 1);
 }
 .calendarDay img {
   width: 100%;
@@ -99,147 +106,14 @@
     }
 }
 .calendarDay .overlay {
-  /*background: white;*/
   height: 100%;
   width: 100%;
-  /*opacity: .8;*/
   top: 0;
   left: 0;
   position: absolute;
   padding: 0;
   transition: opacity .5s;
-  font-family: helvetica, sans-serif;
-  color: white;
-  /*font-size: 50px;*/
-  font-size: 8vw;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 0px 0px 15px rgba(150, 150, 150, 1);
   cursor: pointer;
-}
-
-.calendarDay .overlay.day1 {
-  /*background: url(../images/day_overlays/day-overlay-01.svg);*/
-}
-
-.calendarDay .overlay.day2 {
-  /*background: url(../images/day_overlays/day-overlay-02.svg);*/
-}
-
-.calendarDay .overlay.day3 {
-  /*background: url(../images/day_overlays/day-overlay-03.svg);*/
-}
-
-.calendarDay .overlay.day4 {
-  /*background: url(../images/day_overlays/day-overlay-04.svg);*/
-}
-
-.calendarDay .overlay.day5 {
-  /*background: url(../images/day_overlays/day-overlay-05.svg);*/
-}
-
-.calendarDay .overlay.day6 {
-  /*background: url(../images/day_overlays/day-overlay-06.svg);*/
-}
-
-.calendarDay .overlay.day7 {
-  /*background: url(../images/day_overlays/day-overlay-07.svg);*/
-}
-
-.calendarDay .overlay.day8 {
-  /*background: url(../images/day_overlays/day-overlay-08.svg);*/
-}
-
-.calendarDay .overlay.day9 {
-  /*background: url(../images/day_overlays/day-overlay-09.svg);*/
-}
-
-.calendarDay .overlay.day10 {
-  /*background: url(../images/day_overlays/day-overlay-10.svg);*/
-}
-
-.calendarDay .overlay.day11 {
-  /*background: url(../images/day_overlays/day-overlay-11.svg);*/
-}
-
-.calendarDay .overlay.day12 {
-  /*background: url(../images/day_overlays/day-overlay-12.svg);*/
-}
-
-.calendarDay .overlay.day13 {
-  /*background: url(../images/day_overlays/day-overlay-13.svg);*/
-}
-
-.calendarDay .overlay.day14 {
-  /*background: url(../images/day_overlays/day-overlay-14.svg);*/
-}
-
-.calendarDay .overlay.day15 {
-  /*background: url(../images/day_overlays/day-overlay-15.svg);*/
-}
-
-.calendarDay .overlay.day16 {
-  /*background: url(../images/day_overlays/day-overlay-16.svg);*/
-}
-
-.calendarDay .overlay.day17 {
-  /*background: url(../images/day_overlays/day-overlay-17.svg);*/
-}
-
-.calendarDay .overlay.day18 {
-  /*background: url(../images/day_overlays/day-overlay-18.svg);*/
-}
-
-.calendarDay .overlay.day19 {
-  /*background: url(../images/day_overlays/day-overlay-19.svg);*/
-}
-
-.calendarDay .overlay.day20 {
-  /*background: url(../images/day_overlays/day-overlay-20.svg);*/
-}
-
-.calendarDay .overlay.day21 {
-  /*background: url(../images/day_overlays/day-overlay-21.svg);*/
-}
-
-.calendarDay .overlay.day22 {
-  /*background: url(../images/day_overlays/day-overlay-22.svg);*/
-}
-
-.calendarDay .overlay.day23 {
-  /*background: url(../images/day_overlays/day-overlay-23.svg);*/
-}
-
-.calendarDay .overlay.day24 {
-  /*background: url(../images/day_overlays/day-overlay-24.svg);*/
-}
-
-.calendarDay .overlay.day25 {
-  /*background: url(../images/day_overlays/day-overlay-25.svg);*/
-}
-
-.calendarDay .overlay.day26 {
-  /*background: url(../images/day_overlays/day-overlay-26.svg);*/
-}
-
-.calendarDay .overlay.day27 {
-  /*background: url(../images/day_overlays/day-overlay-27.svg);*/
-}
-
-.calendarDay .overlay.day28 {
-  /*background: url(../images/day_overlays/day-overlay-28.svg);*/
-}
-
-.calendarDay .overlay.day29 {
-  /*background: url(../images/day_overlays/day-overlay-29.svg);*/
-}
-
-.calendarDay .overlay.day30 {
-  /*background: url(../images/day_overlays/day-overlay-30.svg);*/
-}
-
-.calendarDay .overlay.day31 {
-  /*background: url(../images/day_overlays/day-overlay-31.svg);*/
 }
 
 .calendarDay:hover .overlay {
