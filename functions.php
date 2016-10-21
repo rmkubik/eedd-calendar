@@ -196,27 +196,27 @@
   function getModalTitle() {
     $output = getMonthName() . " ";
     if (isset($_GET['d']) && !empty($_GET['d'])) {
-      switch ($_GET["d"]) {
+      $day = $_GET['d'];
+      if ($day == 'L') {
+        $lastDay = getLastVideoDay();
+        $day = $lastDay;
+      }
+      switch ($day) {
         case 1:
         case 21:
         case 31:
-          $output .= $_GET["d"] . "st";
+          $output .= $day . "st";
           break;
         case 2:
         case 22:
-          $output .= $_GET["d"] . "nd";
+          $output .= $day . "nd";
           break;
         case 3:
         case 23:
-          $output .= $_GET["d"] . "rd";
-          break;
-        case 'L':
-          getLastVideoDay();
-          //if 0 hide modal
-          //else display that day
+          $output .= $day . "rd";
           break;
         default:
-          $output .= $_GET["d"] . "th";
+          $output .= $day . "th";
           break;
       }
     } else {
