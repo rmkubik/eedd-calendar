@@ -89,11 +89,17 @@
         echo $currentMonth;
         echo '\', ';
         echo $days;
-        echo ')"><img src="';
-        echo getInstaThumbnailUrl($month_data[$currentMonth][$days]["vid_id"]);
-        echo '" data-target="#video-carousel" data-slide-to="';
-        echo $days - 1;
-        echo '"/>';
+        echo ')">';
+
+        $instaAddress = getInstaThumbnailUrl($month_data[$currentMonth][$days]["vid_id"]);
+        if ($instaAddress != "") {
+          echo '<img src="';
+          echo $instaAddress;
+          echo '" data-target="#video-carousel" data-slide-to="';
+          echo $days - 1;
+          echo '"/>';
+        }
+
         echo '<div class="day' . $days . ' overlay"';
         echo ' data-target="#video-carousel" data-slide-to="';
         echo $days - 1;
