@@ -85,26 +85,29 @@
           $first_day = false;
         }
         echo '">';
-        echo '<div class="calendarDay"><a data-toggle="modal" data-target="#videoModal" onclick="openModal(\'';
-        echo $currentMonth;
-        echo '\', ';
-        echo $days;
-        echo ')">';
+        echo '<div class="calendarDay">';
 
         $instaAddress = getInstaThumbnailUrl($month_data[$currentMonth][$days]["vid_id"]);
         if ($instaAddress != "") {
+          echo '<a data-toggle="modal" data-target="#videoModal" onclick="openModal(\'';
+          echo $currentMonth;
+          echo '\', ';
+          echo $days;
+          echo ')">';
           echo '<img src="';
           echo $instaAddress;
           echo '" data-target="#video-carousel" data-slide-to="';
           echo $days - 1;
           echo '"/>';
+          echo '<div class="day' . $days . ' overlay"';
+          echo ' data-target="#video-carousel" data-slide-to="';
+          echo $days - 1;
+          echo '">' . $days . '</div></a>';
+        } else {
+          echo '<div class="day' . $days . '"></div>';
         }
-
-        echo '<div class="day' . $days . ' overlay"';
-        echo ' data-target="#video-carousel" data-slide-to="';
-        echo $days - 1;
-        echo '">' . $days . '</div></a></div></div>';
-        }
+        echo '</div></div>';
+      }
       echo '</div>';
     }
   }
