@@ -13,24 +13,17 @@
     <title> Calendar Demo </title>
 	</head>
 	<body>
-		<?php
-			$webdev_class = "active";
-			include("navbar.php");
-		?>
-
-      <div class="container" style="margin-bottom: 20px;">
-        <div class="col-xs-1 col-sm-offset-4 col-xs-offset-2 text-center"><a id="prev-month" class="btn btn-default" href="<?php echo getPrevMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
-        <div class="col-sm-3 col-xs-6"><h2 class="text-center" id="monthName"> <?php echo getMonthName(); ?> </h2></div>
-        <div class="col-xs-1 text-center"><a id="next-month" class="btn btn-default" href="<?php echo getNextMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
-      </div>
-
-      <div class="container">
-				<?php getInstaMonth() ?>
-      </div>
-
-			<?php if (getLastVideoDay() != 0) include("modal.php") ?>
-
+    <div class="container" style="margin-bottom: 20px; margin-top: 20px;">
+      <div class="col-xs-1 col-sm-offset-4 col-xs-offset-2 text-center"><a id="prev-month" class="btn btn-default" href="<?php echo getPrevMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+      <div class="col-sm-3 col-xs-6"><h2 class="text-center" id="monthName"> <?php echo getMonthName(); ?> </h2></div>
+      <div class="col-xs-1 text-center"><a id="next-month" class="btn btn-default" href="<?php echo getNextMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
     </div>
+
+    <div class="container">
+			<?php getInstaMonth() ?>
+    </div>
+
+		<?php if (getLastVideoDay() != 0) include("modal.php") ?>
 		<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 	</body>
