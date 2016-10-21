@@ -210,6 +210,9 @@
         case 23:
           $output .= $_GET["d"] . "rd";
           break;
+        case 'L':
+
+          break;
         default:
           $output .= $_GET["d"] . "th";
           break;
@@ -263,6 +266,13 @@
   function getMonthData() {
     $string = file_get_contents("data/months.json");
     return json_decode($string, true);
+  }
+  function getLastVideoDay($month) {
+    //for i in days, loop backwards
+    //is vid_id != ""
+    //if all are "", hide modal
+    //get first day you run into and return it
+    //month should always have day 1 -> day L
   }
   function getVideoPlayerUrl($vid_id) {
     if (isset($vid_id) && !empty($vid_id)) {

@@ -44,14 +44,20 @@
       $string = file_get_contents("data/months.json");
       $month_data = json_decode($string, true);
       for ($month = 0; $month < 12; $month++) {
+				$lastDay = 0;
         for ($day = 1; $day <= $month_data[$monthNames[$month]]["days"]; $day++) {
-          if (array_key_exists($monthNames[$month] . "-$day-submit",$_POST)) {
+          //if (array_key_exists($monthNames[$month] . "-$day-submit",$_POST)) {
 						$month_data[$monthNames[$month]][$day]["vid_id"] = $_POST[$monthNames[$month] . "-$day-vid_id"];
+						if ($month_data[$monthNames[$month]][$day]["vid_id"] != "") {
+							if ($day > $lastDay)
+								$lastDay = $day;
+						}
             // $month_data[$monthNames[$month]][$day]["thumbnail"] = $_POST[$monthNames[$month] . "-$day-thumbnail"];
             // $month_data[$monthNames[$month]][$day]["video"] = $_POST[$monthNames[$month] . "-$day-video"];
             // $month_data[$monthNames[$month]][$day]["desc"] = $_POST[$monthNames[$month] . "-$day-desc"];
-          }
+          //}
         }
+				$month_data[$monthNames[$month]]["lastDay"] = $lastDay;
       }
       $month_json = json_encode($month_data);
       file_put_contents("data/months.json", $month_json);
