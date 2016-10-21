@@ -153,14 +153,19 @@
   function getInstaModal() {
     $currentMonth = getCurrentMonth();
     $month_data = getMonthData();
-    $first_day = true;
+    $activeDay = 1;
+    if (isset($_GET['d']) && !empty($_GET['d'])) {
+      if ($_GET['d'] == 'L')
+        $activeDay = getLastVideoDay();
+      else
+        $activeDay = $_GET['d'];
+    }
     for ($i = 1; $i <= $month_data[$currentMonth]["days"]; $i++) {
       if (isset($month_data[$currentMonth][$i]["vid_id"]) && !empty($month_data[$currentMonth][$i]["vid_id"])) {
         echo '<div id="' . $currentMonth . $i . '"';
         echo 'class="item';
-        if ($first_day) {
+        if ($i == $activeDay) {
           echo ' active';
-          $first_day = false;
         }
         echo '">';
         echo getInstaEmbedScript($month_data[$currentMonth][$i]["vid_id"], $currentMonth . $i);

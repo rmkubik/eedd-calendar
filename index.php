@@ -29,7 +29,7 @@
       </div>
 
 			<?php if (getLastVideoDay() != 0) include("modal.php") ?>
-			
+
     </div>
 		<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
