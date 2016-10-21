@@ -211,7 +211,9 @@
           $output .= $_GET["d"] . "rd";
           break;
         case 'L':
-
+          getLastVideoDay();
+          //if 0 hide modal
+          //else display that day
           break;
         default:
           $output .= $_GET["d"] . "th";
@@ -267,12 +269,9 @@
     $string = file_get_contents("data/months.json");
     return json_decode($string, true);
   }
-  function getLastVideoDay($month) {
-    //for i in days, loop backwards
-    //is vid_id != ""
-    //if all are "", hide modal
-    //get first day you run into and return it
-    //month should always have day 1 -> day L
+  function getLastVideoDay() {
+    $month_data = getMonthData();
+    return $month_data[getCurrentMonth()]["lastDay"];
   }
   function getVideoPlayerUrl($vid_id) {
     if (isset($vid_id) && !empty($vid_id)) {
