@@ -13,11 +13,11 @@
     <title> Calendar Demo </title>
 	</head>
 	<body>
-    <div class="container" style="margin-bottom: 20px; margin-top: 20px;">
-      <div class="col-xs-1 col-sm-offset-4 col-xs-offset-2 text-center"><a id="prev-month" class="btn btn-default" href="<?php echo getPrevMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
-      <div class="col-sm-3 col-xs-6"><h2 class="text-center" id="monthName"> <?php echo getMonthName(); ?> </h2></div>
-      <div class="col-xs-1 text-center"><a id="next-month" class="btn btn-default" href="<?php echo getNextMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
-    </div>
+		<div class="form-inline" id="titleBar" style="text-align: center">
+			<a id="prev-month" class="btn btn-default" href="<?php echo getPrevMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<h2 id="monthName"> <?php echo getMonthName(); ?> </h2>
+			<a id="next-month" class="btn btn-default" href="<?php echo getNextMonthUrl(); ?>" role="button"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
 
     <div class="container">
 			<?php getInstaMonth() ?>
