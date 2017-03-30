@@ -65,11 +65,13 @@ function slidePrev() {
   //go to prev month is this is the first day in a month
   if ($('div.active').index() + 1 == 1)
     window.location.replace($("#prev-month").attr("href") + "&d=L");
+  new Vimeo.Player($("div.active iframe")[0]).pause();
 }
 function slideNext() {
   //go to next month is this is the last day in a month
   if ($(".item").length == $('div.active').index() + 1)
     window.location.replace($("#next-month").attr("href") + "&d=1");
+  new Vimeo.Player($("div.active iframe")[0]).pause();
 }
 $(window).load(function(){
   //if modal was open previously, reopen it now

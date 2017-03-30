@@ -26,7 +26,7 @@
       <div id="video-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-        <?php getInstaModal() ?>
+        <?php getModal(); ?>
         </div>
       </div>
     </div>

@@ -142,10 +142,10 @@
         echo '" data-target="#video-carousel" data-slide-to="';
         echo $days - 1;
         echo '"/>';
-        echo '<div class="day' . $days . ' overlay"';
+        echo '<div class="day overlay"';
         echo ' data-target="#video-carousel" data-slide-to="';
         echo $days - 1;
-        echo '"></div></a></div></div>';
+        echo '">' . $days . '</div></a></div></div>';
         }
       echo '</div>';
       }
